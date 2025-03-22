@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyHealth Dashboard</title>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>MyHealth Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#medical-history">Medical History</a></li>
+                <li><a href="#settings">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <nav aria-label="Sidebar Navigation">
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#appointments">Appointments</a></li>
+            <li><a href="#medical-history">Medical History</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Patient Info -->
+        <section aria-labelledby="patient-info">
+            <h2 id="patient-info">Patient Information</h2>
+            <p>Name: Jane Doe</p>
+            <p>Date of Birth: 01/01/1990</p>
+            <p>Contact: jane.doe@example.com | +1-555-1234</p>
+            <p>Emergency Contact: John Doe (+1-555-5678)</p>
+        </section>
+
+        <!-- Upcoming Appointments Table -->
+        <section aria-labelledby="appointments">
+            <h2 id="appointments">Upcoming Appointments</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Doctor</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-04-10</td>
+                        <td>10:00 AM</td>
+                        <td>Dr. John Smith</td>
+                        <td>General Checkup</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Medical History (Expandable) -->
+        <details>
+            <summary><strong>Medical History Summary</strong></summary>
+            <ul>
+                <li>Allergies: Pollen, Penicillin</li>
+                <li>Conditions: Asthma</li>
+                <li>Medications: Inhaler</li>
+                <li>Surgeries: Appendectomy (2010)</li>
+            </ul>
+        </details>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+
+
+    <form id="appointmentForm">
+        <!-- Patient Info -->
+        <fieldset>
+            <legend>Patient Information</legend>
+            <label for="name">Full Name*:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email*:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone*:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+        </fieldset>
+
+        <!-- Doctor & Appointment -->
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor">
+            <option value="john">Dr. John Smith</option>
+            <option value="alice">Dr. Alice White</option>
+        </select>
+
+        <label for="appointmentType">Appointment Type:</label>
+        <select id="appointmentType" name="appointmentType">
+            <option value="checkup">General Checkup</option>
+            <option value="followup">Follow-up</option>
+        </select>
+
+        <!-- Date & Time -->
+        <label for="date">Appointment Date*:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Appointment Time*:</label>
+        <input type="time" id="time" name="time" required>
+
+        <!-- Medical Info -->
+        <label for="symptoms">Symptoms/Medical History:</label>
+        <textarea id="symptoms" name="symptoms"></textarea>
+
+        <!-- Language Preference -->
+        <fieldset>
+            <legend>Preferred Language</legend>
+            <label><input type="radio" name="language" value="english" checked> English</label>
+            <label><input type="radio" name="language" value="spanish"> Spanish</label>
+        </fieldset>
+
+        <button type="submit">Book Appointment</button>
+    </form>
+
+    <!-- Appointment Summary Table (Placeholder) -->
+    <section aria-labelledby="summary">
+        <h2 id="summary">Appointment Summary</h2>
+        <table>
+            <tr>
+                <th>Patient Name</th>
+                <th>Doctor</th>
+                <th>Appointment Type</th>
+                <th>Date & Time</th>
+                <th>Symptoms</th>
+            </tr>
+            <!-- Data would populate here after submission -->
+        </table>
+    </section>
+</body>
+</html>
